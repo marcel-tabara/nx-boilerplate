@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "projects": {
+    "back": "apps/back",
+    "mobile": "apps/mobile",
+    "web": "apps/web"
+  }
+}
