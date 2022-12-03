@@ -1,5 +1,5 @@
 {
-  "name": "mobile",
+  "name": "@myapp/mobile",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/mobile/src",
   "projectType": "application",
@@ -13,7 +13,7 @@
     "serve": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "nx start mobile"
+        "command": "nx start @myapp:mobile"
       }
     },
     "run-ios": {

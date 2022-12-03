@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@myapp:web",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/web/src",
   "projectType": "application",
@@ -48,15 +48,15 @@
       "executor": "@nrwl/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "web:build",
+        "buildTarget": "@myapp:web:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "web:build:development"
+          "buildTarget": "@myapp:web:build:development"
         },
         "production": {
-          "buildTarget": "web:build:production",
+          "buildTarget": "@myapp:web:build:production",
           "hmr": false
         }
       }

@@ -30,7 +30,7 @@
       }
     ]
   },
-  "defaultProject": "back",
+  "defaultProject": "@myapp/web",
   "generators": {
     "@nrwl/react": {
       "application": {
