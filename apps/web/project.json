@@ -48,15 +48,15 @@
       "executor": "@nrwl/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "@myapp:web:build",
+        "buildTarget": "@myapp/web:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "@myapp:web:build:development"
+          "buildTarget": "@myapp/web:build:development"
         },
         "production": {
-          "buildTarget": "@myapp:web:build:production",
+          "buildTarget": "@myapp/web:build:production",
           "hmr": false
         }
       }

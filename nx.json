@@ -30,7 +30,6 @@
       }
     ]
   },
-  "defaultProject": "@myapp/web",
   "generators": {
     "@nrwl/react": {
       "application": {
@@ -48,5 +47,6 @@
         "linter": "eslint"
       }
     }
-  }
+  },
+  "defaultProject": "@myapp/web"
 }
