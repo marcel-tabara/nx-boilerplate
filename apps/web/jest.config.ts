@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'web',
+  displayName: '@myapp/web',
   preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nrwl/react/plugins/jest',

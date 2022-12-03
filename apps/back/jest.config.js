@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'back',
+  displayName: '@myapp/back',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
