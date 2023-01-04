@@ -4,7 +4,6 @@
     "@myapp/back": "apps/back",
     "@myapp/mobile": "apps/mobile",
     "@myapp/shared": "libs/shared",
-    "@myapp/store": "libs/store",
     "@myapp/web": "apps/web"
   }
 }

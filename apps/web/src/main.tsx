@@ -1,4 +1,4 @@
-import { store } from '@myapp/store';
+import { store } from '@myapp/shared';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
