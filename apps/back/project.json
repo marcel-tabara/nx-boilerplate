@@ -30,7 +30,7 @@
     "serve": {
       "executor": "@nrwl/node:node",
       "options": {
-        "buildTarget": "@myapp:back:build"
+        "buildTarget": "@myapp/back:build"
       }
     },
     "lint": {
