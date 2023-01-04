@@ -1,9 +1,3 @@
-import {
-  AppDispatch,
-  RootState,
-  store,
-  useAppDispatch,
-  useAppSelector,
-} from './store';
+import { store, useAppDispatch, useAppSelector } from './store';
 
-export { RootState, AppDispatch, useAppDispatch, useAppSelector, store };
+export { useAppDispatch, useAppSelector, store };
