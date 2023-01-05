@@ -1,4 +1,4 @@
-import { store } from '@myapp/shared';
+import { exampleApi, store } from '@myapp/shared';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
@@ -6,6 +6,9 @@ import { Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 
 function HomeScreen() {
+  const { data, error, isLoading, refetch } =
+    exampleApi.useFetchAllExamplesQuery(5);
+  console.log('########## data', data);
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
@@ -15,7 +18,7 @@ function HomeScreen() {
 
 const Stack = createNativeStackNavigator();
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <NavigationContainer>
@@ -25,6 +28,6 @@ function App() {
       </NavigationContainer>
     </Provider>
   );
-}
+};
 
 export default App;

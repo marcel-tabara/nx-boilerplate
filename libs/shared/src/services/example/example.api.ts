@@ -12,12 +12,12 @@ export const exampleApi = createApi({
       query: (limit = 5) => ({
         url: examplesUrl,
         params: {
-          _limit: limit,
+          limit,
         },
       }),
       providesTags: (result) => [examplesType],
     }),
-    createPost: build.mutation<IExample, IExample>({
+    create: build.mutation<IExample, IExample>({
       query: (post) => ({
         url: examplesUrl,
         method: 'POST',
@@ -25,7 +25,7 @@ export const exampleApi = createApi({
       }),
       invalidatesTags: [examplesType],
     }),
-    updatePost: build.mutation<IExample, IExample>({
+    update: build.mutation<IExample, IExample>({
       query: (post) => ({
         url: `${examplesUrl}/${post.id}`,
         method: 'PUT',
@@ -33,7 +33,7 @@ export const exampleApi = createApi({
       }),
       invalidatesTags: [examplesType],
     }),
-    deletePost: build.mutation<IExample, IExample>({
+    delete: build.mutation<IExample, IExample>({
       query: (post) => ({
         url: `${examplesUrl}/${post.id}`,
         method: 'DELETE',

@@ -37,7 +37,7 @@ export class ExampleController {
       : res.status(HttpStatus.NOT_FOUND);
   }
 
-  @Post('/add')
+  @Post('/')
   async create(@Res() res, @Body() exampleDTO: ExampleDTO) {
     const example = await this.exampleService.create(exampleDTO);
     return res.status(HttpStatus.OK).json({
@@ -46,7 +46,7 @@ export class ExampleController {
     });
   }
 
-  @Put(':_id/update')
+  @Put('/:_id')
   async findByIdAndUpdate(
     @Res() res,
     @Param('_id', new ValidateObjectId()) _id,
@@ -63,7 +63,7 @@ export class ExampleController {
     });
   }
 
-  @Delete(':_id/delete')
+  @Delete('/:_id')
   async findByIdAndRemove(
     @Res() res,
     @Param('_id', new ValidateObjectId()) _id
