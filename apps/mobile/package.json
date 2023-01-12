@@ -17,6 +17,7 @@
     "react-redux": "*",
     "redux": "*",
     "@react-navigation/native": "*",
-    "@react-navigation/native-stack": "*"
+    "@react-navigation/native-stack": "*",
+    "redux-logger": "*"
   }
 }
