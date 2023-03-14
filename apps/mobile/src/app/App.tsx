@@ -7,8 +7,8 @@ import { Provider } from 'react-redux';
 
 function HomeScreen() {
   const { data, error, isLoading, refetch } =
-    exampleApi.useFetchAllExamplesQuery(5);
-  console.log('########## data', data);
+    exampleApi.useFetchAllEntriesQuery();
+
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>

@@ -1,2 +1,2 @@
 export const examplesType = 'Examples';
-export const examplesUrl = '/examples';
+export const examplesUrl = '/fact';

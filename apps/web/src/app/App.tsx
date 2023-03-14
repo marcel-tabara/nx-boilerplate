@@ -4,7 +4,7 @@ import { exampleApi } from '@myapp/shared';
 
 export const App = () => {
   const { data, error, isLoading, refetch } =
-    exampleApi.useFetchAllExamplesQuery(5);
+    exampleApi.useFetchAllEntriesQuery();
 
   return <div>Web App</div>;
 };

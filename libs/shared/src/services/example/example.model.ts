@@ -1,5 +1,5 @@
 export interface IExample {
-  id: number;
-  title: string;
-  body: string;
+  id?: number;
+  fact: string;
+  length: number;
 }
