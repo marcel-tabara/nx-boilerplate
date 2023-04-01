@@ -1,10 +1,21 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
-import { exampleApi } from '@myapp/shared';
+import { externalApi, internalApi } from '@myapp/shared';
 
 export const App = () => {
-  const { data, error, isLoading, refetch } =
-    exampleApi.useFetchAllEntriesQuery();
+  const {
+    data: dataExternal,
+    error: errorExternal,
+    isLoading: isLoadingExternal,
+    refetch: refetchExternal,
+  } = externalApi.useFetchAllEntriesQuery();
+  const {
+    data: dataInternal,
+    error: errorInternal,
+    isLoading,
+    isLoading: Internal,
+    refetch: refetchInternal,
+  } = internalApi.useFetchAllEntriesQuery();
 
   return <div>Web App</div>;
 };

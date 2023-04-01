@@ -4,7 +4,8 @@ import { setupListeners } from '@reduxjs/toolkit/query';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { createLogger } from 'redux-logger';
 import auth from './services/auth/auth.api';
-import { exampleApi } from './services/example/example.api';
+import { externalApi } from './services/external/external.api';
+import { internalApi } from './services/internal/internal.api';
 import polling from './services/polling/polling.api';
 
 const logger = createLogger();
@@ -14,12 +15,16 @@ export const createStore = (
 ) =>
   configureStore({
     reducer: {
-      [exampleApi.reducerPath]: exampleApi.reducer,
+      [externalApi.reducerPath]: externalApi.reducer,
+      [internalApi.reducerPath]: internalApi.reducer,
       polling,
       auth,
     },
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat(exampleApi.middleware).concat(logger),
+      getDefaultMiddleware()
+      .concat(externalApi.middleware)
+      .concat(internalApi.middleware)
+      .concat(logger),
     ...options,
   });
 

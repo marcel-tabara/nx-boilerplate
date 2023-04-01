@@ -1,4 +1,5 @@
 export class ExampleDTO {
-  readonly name: string;
+  readonly length: number;
+  readonly fact: string;
   readonly _id: string;
 }

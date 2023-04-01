@@ -10,7 +10,10 @@ export class Example {
   _id: ObjectId;
 
   @Prop()
-  name: string;
+  fact: string;
+
+  @Prop()
+  length: number;
 }
 
 export const ExampleSchema = SchemaFactory.createForClass(Example);
