@@ -1,9 +1,0 @@
-{
-  "version": 2,
-  "projects": {
-    "@myapp/back": "apps/back",
-    "@myapp/mobile": "apps/mobile",
-    "@myapp/shared": "libs/shared",
-    "@myapp/web": "apps/web"
-  }
-}
