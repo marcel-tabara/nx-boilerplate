@@ -18,6 +18,7 @@
     "redux": "*",
     "@react-navigation/native": "*",
     "@react-navigation/native-stack": "*",
-    "redux-logger": "*"
+    "redux-logger": "*",
+    "react-native-svg-transformer": "*"
   }
 }
