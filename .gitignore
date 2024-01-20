@@ -101,3 +101,4 @@ buck-out/
 **/vendor/bundle/
 
 .local.env
+.nx
