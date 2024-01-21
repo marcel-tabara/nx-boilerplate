@@ -1,18 +1,18 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { BASE_URL_INTERNAL } from '../../constants';
 import { internalType, internalUrl } from './internal.constants';
 import { IExample } from './internal.model';
 
 export const internalApi = createApi({
   reducerPath: 'internalAPI',
-  baseQuery: fetchBaseQuery({ 
+  baseQuery: fetchBaseQuery({
     baseUrl: BASE_URL_INTERNAL,
-      mode: "cors",
-      prepareHeaders: (headers) => {
-        headers.set('Access-Control-Allow-Origin', '*')
-        return headers
-      }
-    }),
+    mode: 'cors',
+    prepareHeaders: (headers) => {
+      headers.set('Access-Control-Allow-Origin', '*');
+      return headers;
+    },
+  }),
   tagTypes: [internalType],
   endpoints: (build) => ({
     fetchAllEntries: build.query<IExample[], void>({

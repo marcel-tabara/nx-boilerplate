@@ -21,7 +21,12 @@ export class ExampleController {
   constructor(private exampleService: ExampleService) {}
 
   @Get()
-  async findPaginated(@Res() res: any, @Query() paginationQuery: PaginationDto) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  async findPaginated(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    @Res() res: any,
+    @Query() paginationQuery: PaginationDto,
+  ) {
     const { limit, skip } = paginationQuery;
     const data = await this.exampleService.find(paginationQuery, {});
     return res
@@ -50,11 +55,11 @@ export class ExampleController {
   async findByIdAndUpdate(
     @Res() res,
     @Param('_id', new ValidateObjectId()) _id,
-    @Body() exampleDTO: ExampleDTO & { _id: string }
+    @Body() exampleDTO: ExampleDTO & { _id: string },
   ) {
     const example = await this.exampleService.findByIdAndUpdate(
       _id,
-      exampleDTO
+      exampleDTO,
     );
     if (!example) throw new NotFoundException('Example does not exist!');
     return res.status(HttpStatus.OK).json({
@@ -66,7 +71,7 @@ export class ExampleController {
   @Delete('/:_id')
   async findByIdAndRemove(
     @Res() res,
-    @Param('_id', new ValidateObjectId()) _id
+    @Param('_id', new ValidateObjectId()) _id,
   ) {
     const example = await this.exampleService.findByIdAndRemove(_id);
     if (!example) throw new NotFoundException('Example does not exist!');

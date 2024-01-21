@@ -8,12 +8,12 @@ import { Example } from './interfaces/example.interface';
 @Injectable()
 export class ExampleService {
   constructor(
-    @InjectModel('Example') private readonly exampleModel: Model<Example>
+    @InjectModel('Example') private readonly exampleModel: Model<Example>,
   ) {}
 
   find = async (paginationQuery: PaginationDto, query): Promise<Example[]> => {
     Logger.log(
-      `ExampleService: Find examples ${JSON.stringify(query, null, 2)}`
+      `ExampleService: Find examples ${JSON.stringify(query, null, 2)}`,
     );
     const { limit, skip, sort } = paginationQuery;
     return await this.exampleModel
@@ -31,7 +31,7 @@ export class ExampleService {
 
   create = async (exampleDTO: ExampleDTO): Promise<Example> => {
     Logger.log(
-      `ExampleService: Create example. ${JSON.stringify(exampleDTO, null, 2)}`
+      `ExampleService: Create example. ${JSON.stringify(exampleDTO, null, 2)}`,
     );
     const newExample = await new this.exampleModel(exampleDTO).save();
 
@@ -40,7 +40,7 @@ export class ExampleService {
 
   findByIdAndUpdate = async (
     _id: string,
-    exampleDTO: ExampleDTO
+    exampleDTO: ExampleDTO,
   ): Promise<Example> => {
     Logger.log(`ExampleService: findByIdAndUpdate ${_id}`);
 
@@ -51,6 +51,6 @@ export class ExampleService {
 
   findByIdAndRemove = async (_id): Promise<Example> => {
     Logger.log(`ExampleService: findByIdAndRemove ${_id}`);
-    return await this.exampleModel.findByIdAndRemove(_id);
+    return await this.exampleModel.findByIdAndDelete(_id);
   };
 }
