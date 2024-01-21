@@ -51,6 +51,6 @@ export class ExampleService {
 
   findByIdAndRemove = async (_id): Promise<Example> => {
     Logger.log(`ExampleService: findByIdAndRemove ${_id}`);
-    return await this.exampleModel.findByIdAndDelete(_id);
+    return await this.exampleModel.findByIdAndRemove(_id);
   };
 }
