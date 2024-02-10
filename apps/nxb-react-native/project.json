@@ -1,0 +1,8 @@
+{
+  "name": "nxb-react-native",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nxb-react-native/src",
+  "projectType": "application",
+  "targets": {},
+  "tags": []
+}

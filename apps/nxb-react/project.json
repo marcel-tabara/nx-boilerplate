@@ -1,0 +1,8 @@
+{
+  "name": "nxb-react",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nxb-react/src",
+  "projectType": "application",
+  "targets": {},
+  "tags": ["nxb-react"]
+}

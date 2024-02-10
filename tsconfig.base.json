@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nxb/services": ["libs/services/src/index.ts"]
+      "@nxb-shared": ["libs/nxb-shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
