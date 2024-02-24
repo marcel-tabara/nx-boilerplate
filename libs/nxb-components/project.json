@@ -24,6 +24,43 @@
           }
         ]
       }
+    },
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/nxb-components/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/nxb-components",
+        "configDir": "libs/nxb-components/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "nxb-components:build-storybook",
+        "staticFilePath": "dist/storybook/nxb-components"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "nxb-components:build-storybook:ci"
+        }
+      }
     }
   }
 }
