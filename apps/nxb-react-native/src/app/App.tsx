@@ -1,4 +1,4 @@
-import { store } from '@nxb-shared';
+import { store } from '@nxb-services';
 import { NavigationContainer } from '@react-navigation/native';
 import * as React from 'react';
 import { Provider } from 'react-redux';

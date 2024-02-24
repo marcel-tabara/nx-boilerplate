@@ -1,11 +1,11 @@
-import { store } from '@nxb-shared';
+import { store } from '@nxb-services';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { App } from './app/App';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement,
 );
 
 root.render(
@@ -13,5 +13,5 @@ root.render(
     <Provider store={store}>
       <App />
     </Provider>
-  </StrictMode>
+  </StrictMode>,
 );

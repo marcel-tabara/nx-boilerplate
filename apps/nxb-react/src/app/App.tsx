@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
-import { externalApi, internalApi } from '@nxb-shared';
+import { externalApi, internalApi } from '@nxb-services';
 
 export const App = () => {
   const {

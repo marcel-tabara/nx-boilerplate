@@ -1,8 +1,8 @@
 {
-  "name": "nxb-shared",
+  "name": "nxb-services",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/nxb-shared/src",
+  "sourceRoot": "libs/nxb-services/src",
   "projectType": "library",
-  "tags": ["nxb-shared"],
+  "tags": ["nxb-services"],
   "targets": {}
 }
