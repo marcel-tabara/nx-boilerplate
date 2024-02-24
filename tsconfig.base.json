@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nxb-components": ["libs/nxb-components/src/index.ts"],
       "@nxb-services": ["libs/nxb-services/src/index.ts"]
     }
   },

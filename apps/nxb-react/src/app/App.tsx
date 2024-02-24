@@ -1,5 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
+import { NxbComponentsButton } from '@nxb-components';
 import { externalApi, internalApi } from '@nxb-services';
 
 export const App = () => {
@@ -17,5 +18,12 @@ export const App = () => {
     refetch: refetchInternal,
   } = internalApi.useFetchAllEntriesQuery();
 
-  return <div>Web App</div>;
+  return (
+    <>
+      <div>Web App</div>
+      <div>
+        <NxbComponentsButton />
+      </div>
+    </>
+  );
 };
