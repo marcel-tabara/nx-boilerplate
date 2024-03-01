@@ -94,6 +94,13 @@
     "ts-node": "*",
     "typescript": "*",
     "url-loader": "*",
-    "webpack-cli": "*"
+    "webpack-cli": "*",
+    "@nx/rollup": "*",
+    "@nx/storybook": "*",
+    "@rollup/plugin-url": "*",
+    "@storybook/addon-essentials": "*",
+    "@storybook/core-server": "*",
+    "@storybook/react-webpack5": "*",
+    "@svgr/rollup": "*"
   }
 }
