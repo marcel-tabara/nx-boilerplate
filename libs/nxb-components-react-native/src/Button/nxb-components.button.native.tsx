@@ -1,17 +1,18 @@
 import { Button, View } from 'react-native';
 
-/* eslint-disable-next-line */
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface NxbComponentsProps {}
 
 export const NxbComponentsButton = (props: NxbComponentsProps) => {
-  const onPress = () => undefined;
+  const onPress = () => console.log('########## test');
   return (
     <View>
       <Button
         onPress={onPress}
-        title="Test Button"
+        title="Test Button Native"
         color="#841584"
         accessibilityLabel="Learn more about this button"
+        {...props}
       />
     </View>
   );

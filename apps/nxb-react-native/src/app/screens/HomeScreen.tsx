@@ -1,4 +1,4 @@
-import { NxbComponentsButton } from '@nxb-components';
+import { NxbComponentsButton } from '@nxb-components-react-native';
 import { Text, View } from 'react-native';
 
 const HomeScreen = () => {

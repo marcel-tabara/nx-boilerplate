@@ -1,24 +1,24 @@
 {
-  "name": "nxb-components",
+  "name": "nxb-components-react",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/nxb-components/src",
+  "sourceRoot": "libs/nxb-components-react/src",
   "projectType": "library",
-  "tags": ["nxb-components"],
+  "tags": ["nxb-components-react"],
   "targets": {
     "build": {
       "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/nxb-components",
-        "tsConfig": "libs/nxb-components/tsconfig.lib.json",
-        "project": "libs/nxb-components/package.json",
-        "entryFile": "libs/nxb-components/src/index.ts",
+        "outputPath": "dist/libs/nxb-components-react",
+        "tsConfig": "libs/nxb-components-react/tsconfig.lib.json",
+        "project": "libs/nxb-components-react/package.json",
+        "entryFile": "libs/nxb-components-react/src/index.ts",
         "external": ["react", "react-dom", "react/jsx-runtime"],
         "rollupConfig": "@nx/react/plugins/bundle-rollup",
         "compiler": "babel",
         "assets": [
           {
-            "glob": "libs/nxb-components/README.md",
+            "glob": "libs/nxb-components-react/README.md",
             "input": ".",
             "output": "."
           }
@@ -29,7 +29,7 @@
       "executor": "@nx/storybook:storybook",
       "options": {
         "port": 4400,
-        "configDir": "libs/nxb-components/.storybook"
+        "configDir": "libs/nxb-components-react/.storybook"
       },
       "configurations": {
         "ci": {
@@ -41,8 +41,8 @@
       "executor": "@nx/storybook:build",
       "outputs": ["{options.outputDir}"],
       "options": {
-        "outputDir": "dist/storybook/nxb-components",
-        "configDir": "libs/nxb-components/.storybook"
+        "outputDir": "dist/storybook/nxb-components-react",
+        "configDir": "libs/nxb-components-react/.storybook"
       },
       "configurations": {
         "ci": {
@@ -53,12 +53,12 @@
     "static-storybook": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "nxb-components:build-storybook",
-        "staticFilePath": "dist/storybook/nxb-components"
+        "buildTarget": "nxb-components-react:build-storybook",
+        "staticFilePath": "dist/storybook/nxb-components-react"
       },
       "configurations": {
         "ci": {
-          "buildTarget": "nxb-components:build-storybook:ci"
+          "buildTarget": "nxb-components-react:build-storybook:ci"
         }
       }
     }

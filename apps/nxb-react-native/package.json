@@ -101,6 +101,13 @@
     "@storybook/addon-essentials": "*",
     "@storybook/core-server": "*",
     "@storybook/react-webpack5": "*",
-    "@svgr/rollup": "*"
+    "@svgr/rollup": "*",
+    "@nx/vite": "*",
+    "@storybook/addon-interactions": "*",
+    "@storybook/jest": "*",
+    "@storybook/react-vite": "*",
+    "@storybook/test-runner": "*",
+    "@storybook/testing-library": "*",
+    "vite": "*"
   }
 }

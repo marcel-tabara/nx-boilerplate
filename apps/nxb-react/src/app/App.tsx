@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
-import { NxbComponentsButton } from '@nxb-components';
+import { NxbComponentsButton } from '@nxb-components-react';
 import { externalApi, internalApi } from '@nxb-services';
 
 export const App = () => {

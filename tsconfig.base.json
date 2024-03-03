@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nxb-components": ["libs/nxb-components/src/index.ts"],
+      "@nxb-components-react": ["libs/nxb-components-react/src/index.ts"],
+      "@nxb-components-react-native": [
+        "libs/nxb-components-react-native/src/index.ts"
+      ],
       "@nxb-services": ["libs/nxb-services/src/index.ts"]
     }
   },

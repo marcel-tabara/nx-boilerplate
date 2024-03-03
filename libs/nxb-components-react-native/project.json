@@ -1,0 +1,52 @@
+{
+  "name": "nxb-components-react-native",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/nxb-components-react-native/src",
+  "projectType": "library",
+  "tags": ["@nxb-components-react-native"],
+  "targets": {
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/nxb-components-react-native/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/nxb-components-react-native",
+        "configDir": "libs/nxb-components-react-native/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c libs/nxb-components-react-native/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "nxb-components-react-native:build-storybook",
+        "staticFilePath": "dist/storybook/nxb-components-react-native"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "nxb-components-react-native:build-storybook:ci"
+        }
+      }
+    }
+  }
+}
