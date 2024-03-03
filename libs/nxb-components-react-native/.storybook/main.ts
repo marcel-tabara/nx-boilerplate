@@ -1,6 +1,7 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+import { resolve } from 'path';
 import { mergeConfig } from 'vite';
 
 const config: StorybookConfig = {
@@ -21,6 +22,12 @@ const config: StorybookConfig = {
   viteFinal: async (config) =>
     mergeConfig(config, {
       plugins: [nxViteTsPaths()],
+      resolve: {
+        alias: {
+          houseform: resolve(__dirname, './lib'),
+          'react-native': 'react-native-web',
+        },
+      },
     }),
 };
 
