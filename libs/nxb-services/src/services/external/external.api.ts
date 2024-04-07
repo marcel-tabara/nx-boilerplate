@@ -22,4 +22,5 @@ export const externalApi = createApi({
       providesTags: (result) => [externalType],
     }),
   }),
+  keepUnusedDataFor: 60, // time in seconds
 });

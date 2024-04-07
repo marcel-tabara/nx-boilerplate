@@ -1,8 +1,15 @@
 /* eslint-disable-next-line */
-export interface NxbComponentsProps {}
+export interface NxbComponentsProps {
+  onClick: () => void;
+  title: string;
+}
 
-export const NxbComponentsButton = (props: NxbComponentsProps) => {
-  return <button type="button">Test Button</button>;
+export const NxbComponentsButton = ({ onClick, title }: NxbComponentsProps) => {
+  return (
+    <button type="button" onClick={onClick}>
+      {title}
+    </button>
+  );
 };
 
 export default NxbComponentsButton;
