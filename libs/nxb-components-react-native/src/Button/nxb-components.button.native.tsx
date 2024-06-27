@@ -4,7 +4,7 @@ import { Button, View } from 'react-native';
 export interface NxbComponentsProps {}
 
 export const NxbComponentsButton = (props: NxbComponentsProps) => {
-  const onPress = () => console.log('########## test');
+  const onPress = () => console.log('########## button clicked');
   return (
     <View>
       <Button
